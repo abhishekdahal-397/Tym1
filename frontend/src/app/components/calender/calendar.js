@@ -11,7 +11,6 @@ const Calendar = () => {
 
 	const makeArr = () => {
 		const numbers = [];
-
 		for (i = 32; i < 46; i++) {
 			numbers.push(i);
 		}

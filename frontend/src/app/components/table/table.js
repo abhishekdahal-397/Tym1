@@ -1,26 +1,29 @@
-// src/Grid.js
 import React from "react";
-import "./table.css";
+import style from "./table.css"; // Optional: Add CSS for styling
+
+const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu"];
 
 const Grid = () => {
-	// Create an array with 36 elements (6x6 grid)
-	const gridItems = Array.from({ length: 25 }, (_, index) => index + 1);
-	const todayDate = new Date();
-	console.log(todayDate);
+	// Create an array of 45 days
+	const days = Array.from({ length: 45 }, (_, i) => i + 1);
 
-	return (
-		<div className="grid-container bg-white w-40 h-40">
-			<div className="grid-item">sun</div>
-			<div className="grid-item">mon</div>
-			<div className="grid-item">tue</div>
-			<div className="grid-item">wed</div>
-			<div className="grid-item">thu</div>
-			{gridItems.map((item) => (
-				<div key={item} className="grid-item">
-					{item}
+	return (<><div className="calendar">
+			<div className=" h-5 w-50 bg-white"></div>
+			{/* Render the days of the week */}
+			{daysOfWeek.map((day) => (
+				<div key={day} className="day-name">
+					{day}
+				</div>
+			))}
+			{/* Render the days in the calendar */}
+			{days.map((day) => (
+				<div key={day} className="day-number">
+					{day}
 				</div>
 			))}
 		</div>
+	</>
+		
 	);
 };
 
