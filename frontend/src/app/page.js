@@ -4,6 +4,7 @@ import Grid from "./components/table/table";
 
 export default function Home() {
 	//hello
+	//feature added
 	return (
 		<div className="h-[100vh] w-[100vw] bg-blue-400 flex items-center justify-center">
 			<CustomCalendar />
